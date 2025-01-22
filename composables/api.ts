@@ -7,10 +7,6 @@ export const useApi = () => {
   const authUrlV1 = "https://csskluquckoiqiglgvpa.supabase.co/auth/v1";
   const authHeaders = {
     "Content-Type": "application/json",
-    apikey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzc2tsdXF1Y2tvaXFpZ2xndnBhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0NzM3NzIsImV4cCI6MjAyNjA0OTc3Mn0.HBs_tVdMQmbBt9ZoxqgoD-EZx-XIrej1BmQFSR169O0",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzc2tsdXF1Y2tvaXFpZ2xndnBhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0NzM3NzIsImV4cCI6MjAyNjA0OTc3Mn0.HBs_tVdMQmbBt9ZoxqgoD-EZx-XIrej1BmQFSR169O0",
   };
 
   const getToken = async ({
