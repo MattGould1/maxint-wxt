@@ -4,6 +4,7 @@ export const useApi = () => {
   // https://csskluquckoiqiglgvpa.supabase.co/rest/v1/BudgetMonthlyLeftAmount?select=%2A&userId=eq.d45a4968-dea9-4318-8440-ab90839bc125&month=eq.2025-01-01
 
   const baseUrlV1 = "https://csskluquckoiqiglgvpa.supabase.co/rest/v1";
+  const authUrlV1 = "https://csskluquckoiqiglgvpa.supabase.co/auth/v1";
   const authHeaders = {
     "Content-Type": "application/json",
     apikey:
@@ -20,7 +21,7 @@ export const useApi = () => {
     password: string;
   }): Promise<User | undefined> => {
     try {
-      const response = await fetch(`${baseUrlV1}/token?grant_type=password`, {
+      const response = await fetch(`${authUrlV1}/token?grant_type=password`, {
         method: "POST",
         headers: {
           ...authHeaders,
@@ -33,7 +34,9 @@ export const useApi = () => {
           },
         }),
       });
-      return await response.json();
+
+      const data = await response.json();
+      return data;
     } catch (err) {
       console.log(err);
     }

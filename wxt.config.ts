@@ -5,7 +5,7 @@ export default defineConfig({
   extensionApi: "chrome",
   modules: ["@wxt-dev/module-vue"],
   manifest: {
-    permissions: ["storage"],
+    permissions: ["storage", "tabs"],
     web_accessible_resources: [
       {
         resources: ["**/*"],
