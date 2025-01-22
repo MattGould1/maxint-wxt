@@ -1,8 +1,6 @@
 import { User } from "@/types";
 
 export const useApi = () => {
-  // https://csskluquckoiqiglgvpa.supabase.co/rest/v1/BudgetMonthlyLeftAmount?select=%2A&userId=eq.d45a4968-dea9-4318-8440-ab90839bc125&month=eq.2025-01-01
-
   const baseUrlV1 = "https://csskluquckoiqiglgvpa.supabase.co/rest/v1";
   const authUrlV1 = "https://csskluquckoiqiglgvpa.supabase.co/auth/v1";
   const authHeaders = {

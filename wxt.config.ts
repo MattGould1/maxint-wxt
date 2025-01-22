@@ -5,6 +5,8 @@ export default defineConfig({
   extensionApi: "chrome",
   modules: ["@wxt-dev/module-vue"],
   manifest: {
+    name: "Maxint",
+    description: "A small but powerful wxt to help you manage your budget.",
     permissions: ["storage", "tabs"],
     host_permissions: ["*://*.netflix.com/*"],
     web_accessible_resources: [
@@ -21,10 +23,6 @@ export default defineConfig({
     ],
     action: {
       default_popup: "entrypoints/popup/index.html",
-      // Optional: Set default badge properties
-      // default_badge_text: "",
-      // default_badge_background_color: "#4CAF50",
-      // browser_style: true,
     },
   },
 });
