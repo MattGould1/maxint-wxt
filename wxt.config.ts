@@ -8,7 +8,7 @@ export default defineConfig({
     name: "Maxint",
     description: "A small but powerful wxt to help you manage your budget.",
     permissions: ["storage", "tabs"],
-    host_permissions: ["*://*.netflix.com/*"],
+    host_permissions: ["*://*.netflix.com/*", "*://*.bankofamerica.com/*"],
     web_accessible_resources: [
       {
         resources: ["**/*"],
@@ -19,6 +19,10 @@ export default defineConfig({
       {
         matches: ["*://*.netflix.com/*"],
         js: ["/content-scripts/content.js"],
+      },
+      {
+        matches: ["*://*.bankofamerica.com/*"],
+        js: ["/content-scripts/offers.js"],
       },
     ],
     action: {
